@@ -41,7 +41,7 @@
                     <input type="password" id="password" name="password" class="form-control text-light" 
                         required>
                 </div>
-                <button type="submit" class="btn btn-custom w-100">Login</button>
+                <button type="submit" class="btn btn-custom w-100">Registrarse</button>
             </form>
             <footer class="mt-4">
                 <p class="text-light">

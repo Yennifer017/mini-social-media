@@ -16,7 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_publication')->nullable(false);
             $table->unsignedBigInteger('id_user')->nullable(false);
             $table->string('content')->nullable(false);
-            $table->boolean('status')->nullable(false)->default(false);
+            $table->enum('status', ['created', 'edited', 'deleted'])
+                ->nullable(false)->default('created');
             $table->timestamps();
 
             //relations

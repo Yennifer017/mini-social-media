@@ -17,11 +17,28 @@ class PublicationController extends Controller
     }
 
     public function edit(Request $request){
-        
+        $id_user = Cookie::get('user_session');
+        $publication = Publication::where('id', $request->publication_id)
+            ->where('id_user', $id_user)
+            ->first();
+        if($publication){
+            $publication->status = 'edited';
+            $publication->content = $request->content;
+            $publication->save();
+        }
+        return redirect()->back();
     }
 
     public function delete(Request $request){
-
+        $id_user = Cookie::get('user_session');
+        $publication = Publication::where('id', $request->publication_id)
+            ->where('id_user', $id_user)
+            ->first();
+        if($publication){
+            $publication->status = 'deleted';
+            $publication->save();
+        }
+        return redirect()->back();
     }
 
     public function viewPublications(){

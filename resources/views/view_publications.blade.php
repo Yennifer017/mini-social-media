@@ -32,9 +32,7 @@
                                 <p class="" name="content" rows="4">
                                     {{ $publication->content }}</p>
                             </div>
-
                             <hr>
-
                             <small>
                                 @if ($publication->status == 'edited')
                                     Editado*
@@ -45,10 +43,11 @@
                             </small>
                         </div>
                         <div class="card-footer text-muted">
-                            <form method="POST">
+                            <form method="POST" action="{{ route('add_comment') }}">
                                 @csrf
                                 <div class="d-flex mb-3 flex-column flex-sm-row">
                                     <div class="input-group flex-grow-1 me-2">
+                                        <input type="hidden" name="id_publication" value="{{ $publication->id }}">
                                         <textarea class="form-control text-light" name="content" rows="1"></textarea>
                                         <button class="btn btn-primary text-light" type="submit">
                                             Comentar
