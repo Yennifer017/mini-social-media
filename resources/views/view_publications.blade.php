@@ -26,7 +26,7 @@
         @foreach ($publications as $publication)
             <div class="row mt-3">
                 <div class="col">
-                    <div class="card h-100 shadow-sm bg-dark bg-gradient" >
+                    <div class="card h-100 shadow-sm bg-dark bg-gradient">
                         <div class="card-body bg-dark text-light">
                             <div class="mb-3">
                                 <p class="" name="content" rows="4">
@@ -53,10 +53,13 @@
                                             Comentar
                                         </button>
                                     </div>
-                                    <button class="btn btn-secondary mt-2 mt-sm-0 ms-sm-2 w-sm-auto">
+
+                                    <a type="button" class="btn btn-secondary mt-2 mt-sm-0 ms-sm-2 w-sm-auto"
+                                        href="{{ route('view_comments', ['id' => $publication->id]) }}">
                                         Ver comentarios
-                                    </button>
-                                </div>               
+                                    </a>
+
+                                </div>
                             </form>
                         </div>
                     </div>

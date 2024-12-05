@@ -51,3 +51,6 @@ Route::post('/delete_publication', [PublicationController::class, 'delete'])
 //COMMENTS
 Route::post('/add_comment', [CommentController::class, 'create'])
     ->name('add_comment');    
+
+Route::get('/view_comments/{id}', [CommentController::class, 'view'])
+    ->name('view_comments');
