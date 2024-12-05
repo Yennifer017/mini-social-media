@@ -1,0 +1,33 @@
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #343a40, #007bff);
+    color: white;
+}
+
+.cover-container {
+    max-width: 42rem;
+    text-align: center;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.btn-custom {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
