@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserApp;
+use Cookie;
 use Illuminate\Http\Request;
 
 class UserAppController extends Controller
@@ -23,6 +24,16 @@ class UserAppController extends Controller
         $user = new UserApp();
         $user->username = $request->username;
         $user->password = $request->password;
-        
+        $user = UserApp::where('username', $request->username)
+                  ->where('password', $user->password)
+                  ->where('status', true)
+                  ->first();
+
+        if ($user) {
+            Cookie::queue('user_session', $user->id, 0);
+            return view('dashboard');
+        } else {
+            return view('login');
+        }
     }
 }

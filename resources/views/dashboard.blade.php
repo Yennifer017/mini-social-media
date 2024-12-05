@@ -12,15 +12,16 @@
     <div class="d-flex align-items-center justify-content-center">
         <div class="cover-container">
             <header class="mb-4">
-                <h1 class="display-3 fw-bold text-light">¡Bienvenido, Usuario!</h1>
+                <h1 class="display-3 fw-bold text-light">¡Bienvenido!</h1>
             </header>
             <main>
                 <p class="lead text-light mb-4">
                     ¿Qué te gustaría hacer hoy?
                 </p>
                 <div class="btn-group-vertical w-100">
-                    <a href="publication_create" class="btn btn-custom btn-lg mb-3">Publicar</a>
-                    <a href="publication_view" class="btn btn-custom btn-lg mb-3">Ver Publicaciones</a>
+                    <a href="create_publication" class="btn btn-custom btn-lg mb-3">Publicar</a>
+                    <a href="view_publications" class="btn btn-custom btn-lg mb-3">Explorar publicaciones</a>
+                    <a href="my_publications" class="btn btn-custom btn-lg mb-3">Ver publicaciones propias</a>
                 </div>
             </main>
             <footer class="mt-5">

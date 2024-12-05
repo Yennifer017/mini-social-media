@@ -11,9 +11,10 @@
 <body class="min-vh-100 d-flex align-items-center justify-content-center">
     
     <div class="d-flex align-items-center justify-content-center text-center">
-        <div class="card p-4" style="background-color: rgba(0, 0, 0, 0.6); border: none; border-radius: 8px; max-width: 400px;">
+        <div class="card p-4 form-inherit">
             <h1 class="mb-4">Login</h1>
-            <form action="/login" method="POST">
+            <form action="check_user" method="POST">
+                @csrf
                 <div class="mb-3">
                     <label for="username" class="form-label text-light">Username</label>
                     <input type="text" id="username" name="username" class="form-control text-light" 

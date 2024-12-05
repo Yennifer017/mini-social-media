@@ -11,7 +11,7 @@
 <body class="min-vh-100 d-flex align-items-center justify-content-center">
     
     <div class="d-flex align-items-center justify-content-center text-center">
-        <div class="card p-4" style="background-color: rgba(0, 0, 0, 0.6); border: none; border-radius: 8px; max-width: 400px;">
+        <div class="card p-4 form-inherit">
             <h1 class="mb-4">Sign up</h1>
             <form action="{{ route('add_user') }}" method="POST">
                 @csrf

@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_user')->nullable(false);
             $table->string('content')->nullable(false);
-            $table->boolean('status')->nullable(false)->default(false);
+            
+            $table->enum('status', ['created', 'edited', 'deleted'])
+                ->nullable(false)->default('created');
             $table->timestamps();
-
+            
             //relations
             $table->foreign('id_user')
                 ->references('id')->on('user_apps')->onDelete('restrict');
